@@ -25,9 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 🚨 Generate certificate content dynamically
-    certificateContent. = `
-    <h3>${studentName}</h3>
-  `;
+    certificateContent.innerHTML = `
+      <h2>Certificate of Achievement</h2>
+      <p>This is to certify that</p>
+      <h3>${studentName}</h3>
+      <p>has almost completed the</p>
+      <h4>${courseName}</h4>
+      <p>with legendary perseverance and world-class bad-assery for not giving up 🏆</p>
+      <img src="./logo.png" style="padding:30px; height:100px; alt="Codespace barner">
+      <p>${personalMessage} 😻</p>
+    `;
   
     //  Display the modal
     modal.style.display = 'block';
