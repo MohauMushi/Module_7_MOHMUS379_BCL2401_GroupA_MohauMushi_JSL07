@@ -1,13 +1,8 @@
-# [JSL07] Submission: Proud of your Progress
+# [JSL07]: Progress Certificate Generator
 
-Create a personalized certificate of achievement with the "Proud of Your Progress Certificate Generator". This web application requires users to input their name, a personalized message, and the course name to dynamically generate a certificate displayed in a modal.
+## Project Overview: Certificate Generation Web Application
 
-## Steps for Submission
-1. **Clone Starter Code:** Begin by cloning the Starter Code Repository from [GitHub](https://github.com/CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_JSL07).
-2. **Develop Your Solution:** Write your code to implement the project's functionality.
-3. **Commit Your Changes:** As you make progress, commit your changes with meaningful messages.
-4. **Push to GitHub:** Upload your local repository changes to GitHub.
-5. **Submit Your Work:** Share your GitHub Repository Link on the LMS under the [JSL07] Submission Project Tab.
+The project aims was to develop a web application that allows users to input their name, a personalized message, and the course name, and then dynamically generates a certificate to be displayed in a modal window. The application will also include validation which ensure that all required fields are completed before generating the certificate. Additionally, users have an option to download the certificate in PDF format.
 
 ## Project Features
 - **Input Fields:** For user's name, personalized message, and course name.
@@ -15,28 +10,16 @@ Create a personalized certificate of achievement with the "Proud of Your Progres
 - **Modal Display:** The certificate is shown in a modal window.
 - **Close Button:** For closing the modal.
 - **Validation:** Checks that all fields are completed before certificate generation.
+- **Download Certificate Button:** Download the certificate to be in a pdf format.
 
 ## Development Objectives
 - **Dynamic Content:** Dynamically generate the certificate's content based on user input, ensuring it matches the reference solution.
 - **Modal Implementation:** Show the certificate in a modal upon form submission; the modal should initially be hidden.
 - **Interaction Handling:** Enable modal display with form submission and allow closing with a close button. Ensure form inputs are cleared post-submission.
 
-## Addressing Starter Code Challenges 🪲
-Your tasks include completing partially implemented input collection, dynamically generating certificate content, and implementing modal display and interaction handling based on the provided starter code framework.
+## 🛠️ Improvement
+To the Certificate Content Modal, I've add the download button, using the `html2pdf` library, which has been placed at the bottom of the page inside the `</body>` tags for converting the HTML to pdf format so that the user may be able to download the certificate after generating the certificate. 
 
-Partial implementation for collecting input values, where specific assignments are marked with 🚨, indicating tasks to complete.
-
-## How to Proceed
-1. **Clone the Repository:** Use the provided [link](https://github.com/CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_JSL07) to clone the repository and start working in your local environment.
-2. **Code:** Address each challenge following the project objectives and features.
-3. **Commit Changes:** Regularly commit your work with descriptive messages.
-4. **Push Updates:** Upload your commits to GitHub, ensuring your repository reflects the latest changes.
-5. **Verify Submission:** Double-check your GitHub repository for the final code and push any last-minute updates.
-
-## Evaluation Criteria
-- **Code Review:** We'll check your repository for the complete and updated code files.
-- **Functionality:** Your modifications will be assessed for adherence to project requirements.
-- **Commit History:** Your commit messages and history will reflect your development process.
-
-Get going and celebrate your progress 🥳🥳🥳
-
+## 📚 What I learned
+I've learnt to getElementById for the HTML to the JavaScript, and be able to validate the input values that the user enter when the button is pressed to generate the certificate. Then the other thing is to display the certificate in the modal window using the `innerHTML` then implemented the HTML code for the content of the certificate which will be displayed. 
+I also learnt to use the html2pdf Library to be able to download the achievement certificate and have the certificate in a pdf format in you desktop and be able to share your achievement certificate with clients, employers, etc. 
