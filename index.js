@@ -18,8 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const studentName = studentNameInput.value;
   const personalMessage = personalMessageInput.value;
-  const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+  const courseName = courseNameInput.value.trim() !== '' ? courseNameInput.value : '';
 
+  //Checks that a valid student name was entered.
+  if (/^[^a-zA-Z]*$/.test(studentName.trim())) {
+    return alert(`Student's name must contain letters. \nPlease enter a valid name.`);
+  } 
+  
   if (studentName.trim() === '' || personalMessage.trim() === '') {
     alert('Please fill in all fields');
     return;
