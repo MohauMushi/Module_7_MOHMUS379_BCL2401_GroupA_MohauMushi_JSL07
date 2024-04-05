@@ -18,7 +18,7 @@ The project aims was to develop a web application that allows users to input the
 - **Interaction Handling:** Enable modal display with form submission and allow closing with a close button. Ensure form inputs are cleared post-submission.
 
 ## 🛠️ Improvement
-To the Certificate Content Modal, I've add the download button, using the `html2pdf` library, which has been placed at the bottom of the page inside the `</body>` tags for converting the HTML to pdf format so that the user may be able to download the certificate after generating the certificate. 
+To the Certificate Content Modal, I've add the download button, using the `html2pdf` library, which has been placed at the bottom of the page inside the `</body>` tags for converting the HTML to pdf format so that the user may be able to download the certificate after generating the certificate. Also coded the JavaScript for the download Certificate button using `classList.add` and then created a function for converting the `innerHTML` to pdf format. 
 
 ## 📚 What I learned
 I've learnt to getElementById for the HTML to the JavaScript, and be able to validate the input values that the user enter when the button is pressed to generate the certificate. Then the other thing is to display the certificate in the modal window using the `innerHTML` then implemented the HTML code for the content of the certificate which will be displayed. 
