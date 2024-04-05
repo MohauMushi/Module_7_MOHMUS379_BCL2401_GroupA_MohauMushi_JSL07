@@ -11,36 +11,36 @@ document.addEventListener('DOMContentLoaded', function () {
   cardForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Get input values
-    const studentNameInput = document.getElementById('studentName');
-    const personalMessageInput = document.getElementById('personalMessage');
-    const courseNameInput = document.getElementById('courseName');  
+  // Get input values
+  const studentNameInput = document.getElementById('studentName');
+  const personalMessageInput = document.getElementById('personalMessage');
+  const courseNameInput = document.getElementById('courseName');  
 
-    const studentName = studentNameInput.value;
-    const personalMessage = personalMessageInput.value;
-    const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+  const studentName = studentNameInput.value;
+  const personalMessage = personalMessageInput.value;
+  const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
 
-    if (studentName.trim() === '' || personalMessage.trim() === '') {
-      alert('Please fill in all fields');
-      return;
-    }
+  if (studentName.trim() === '' || personalMessage.trim() === '') {
+    alert('Please fill in all fields');
+    return;
+  }
 
-    // Generate certificate content dynamically
-    certificateContent.innerHTML = `
-      <h2>Certificate of Achievement</h2>
-      <p>This is to certify that</p>
-      <h3>${studentName}</h3>
-      <p>has almost completed the</p>
-      <h4>${courseName}</h4>
-      <p>with legendary perseverance and world-class bad-assery for not giving up 🏆</p>
-      <img src="./logo.png" style="margin-top: 20px; height:100px; alt="Codespace barner">
-      <p>${personalMessage} 😻</p>
-    `;
+  // Generate certificate content dynamically
+  certificateContent.innerHTML = `
+    <h2>Certificate of Achievement</h2>
+    <p>This is to certify that</p>
+    <h3>${studentName}</h3>
+    <p>has almost completed the</p>
+    <h4>${courseName}</h4>
+    <p>with legendary perseverance and world-class bad-assery for not giving up 🏆</p>
+    <img src="./logo.png" style="margin-top: 20px; height:100px; alt="Codespace barner">
+    <p>${personalMessage} 😻</p>
+  `;
 
-    // Add a download button
-// const downloadButton = document.createElement('button');
-downloadButton.textContent = 'Download Certificate';
-downloadButton.addEventListener('click', function () {
+  // Add a download button
+  // const downloadButton = document.createElement('button');
+  downloadButton.textContent = 'Download Certificate';
+  downloadButton.addEventListener('click', function () {
   // const element = document.getElementById('certificateContent');
   const option = {
     margin: 0.5,
@@ -53,9 +53,9 @@ downloadButton.addEventListener('click', function () {
   html2pdf().from(certificateContent).set(option).save();
 });
 
-    // Append the download button to the modal
-const modalContent = document.querySelector('.modal-content');
-modalContent.appendChild(downloadButton);
+  // Append the download button to the modal
+  const modalContent = document.querySelector('.modal-content');
+  modalContent.appendChild(downloadButton);
   
     //  Display the modal
     modal.style.display = 'block';
