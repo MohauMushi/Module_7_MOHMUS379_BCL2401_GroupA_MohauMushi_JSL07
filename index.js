@@ -3,7 +3,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal');
   const certificateContent = document.getElementById('certificateContent');
   const closeModal = document.querySelector('.close');
+  let studentName;
+
+
+  // Add a download button
   const downloadButton = document.createElement('button');
+  downloadButton.classList.add('download_certificate');
+  downloadButton.textContent = 'Download Certificate';
+  downloadButton.addEventListener('click', function () {
+  const option = {
+    margin: 0.5,
+    filename: `${studentName}_certificate.pdf`,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2},
+    jsPDF: { unit: 'in', format: [10, 8], orientation: 'landscape'}
+  };
+
+  html2pdf().from(certificateContent).set(option).save();
+});
+
+  // Append the download button to the modal
+  const modalContent = document.querySelector('.modal-content');
+  modalContent.appendChild(downloadButton);
 
   // Hide the modal initially
   modal.style.display = 'none';
@@ -16,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const personalMessageInput = document.getElementById('personalMessage');
   const courseNameInput = document.getElementById('courseName');  
 
-  const studentName = studentNameInput.value;
+  studentName = studentNameInput.value;
   const personalMessage = personalMessageInput.value;
   const courseName = courseNameInput.value.trim() !== '' ? courseNameInput.value : '';
 
@@ -42,26 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
     <p>${personalMessage} 😻</p>
   `;
 
-  // Add a download button
-  // const downloadButton = document.createElement('button');
-  downloadButton.textContent = 'Download Certificate';
-  downloadButton.addEventListener('click', function () {
-  // const element = document.getElementById('certificateContent');
-  const option = {
-    margin: 0.5,
-    filename: `${studentName}_certificate.pdf`,
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2},
-    jsPDF: { unit: 'in', format: [10, 8], orientation: 'landscape'}
-  };
-
-  html2pdf().from(certificateContent).set(option).save();
-});
-
-  // Append the download button to the modal
-  const modalContent = document.querySelector('.modal-content');
-  modalContent.appendChild(downloadButton);
-  
     //  Display the modal
     modal.style.display = 'block';
 
@@ -74,6 +75,5 @@ document.addEventListener('DOMContentLoaded', function () {
   //  Close the modal when the close button is clicked
   closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
-    modal.removeChild(downloadButton);
   });
 });
