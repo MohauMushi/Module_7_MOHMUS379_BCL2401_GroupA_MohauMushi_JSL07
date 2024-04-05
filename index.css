@@ -119,7 +119,7 @@ button:hover {
 }
 
 /*styles for the download button */
-.modal-content button {
+.download_certificate {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
@@ -129,6 +129,6 @@ button:hover {
   border-radius: 4px;
   cursor: pointer;
 }
-.modal-content button:hover{
+.download_certificate:hover{
   background-color: green;
 }
