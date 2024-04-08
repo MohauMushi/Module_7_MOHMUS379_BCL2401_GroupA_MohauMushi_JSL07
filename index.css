@@ -102,7 +102,7 @@ h1, .modal-content h2, .modal-content p {
 
 /* Adding a fancy border to the certificate content */
 #certificateContent {
-  background-image:  url('/certificate_backround.jpg');
+  background-image:  url('./certificate_backround.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
